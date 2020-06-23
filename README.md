@@ -49,6 +49,8 @@ section 05
 
 ### V section 06
 
+chapter 05  
+section 06
 **_`package.json`_**
 
 ---

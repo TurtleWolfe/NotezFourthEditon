@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "DEBUG=notez:* node ./bin/www",
+    "server1": "DEBUG=notez:* PORT=3001 node ./bin/www",
+    "server2": "DEBUG=notez:* PORT=3002 node ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
