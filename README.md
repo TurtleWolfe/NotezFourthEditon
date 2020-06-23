@@ -6,9 +6,10 @@
 
 chapter 05  
 section 04  
-models views & partials
+models views routes & partials
 
 ```bash Ch-05 section 4
+
 # curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 # curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 # curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
@@ -35,17 +36,29 @@ touch views/notedestroy.hbs
 git remote add origin https://github.com/TurtleWolf/Notez.git
 git push -u origin master
 git status
+
 ```
+
+---
 
 ### 5 section V
 
+chapter 05  
+section 05
+
+<!-- models views routes & partials -->
+
 **_styles.css_**
+
+---
 
 ### 5 section VI
 
 **_package.json_**
 
 ## Chapter 06
+
+---
 
 ### 6 section IV
 
@@ -63,6 +76,8 @@ npm run server1
 npm run server2
 ```
 
+---
+
 ### 6 - VI
 
 chapter 06  
@@ -74,6 +89,8 @@ section 6
 npm i feather-icons
 npm start
 ```
+
+---
 
 ### 6 - VII
 
@@ -105,6 +122,8 @@ DEBUG=express:* npm start
 ```
 
 ## Chapter 07
+
+---
 
 ### 7 - III
 
