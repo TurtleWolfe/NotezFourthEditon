@@ -2,11 +2,9 @@
 
 ## Chapter 05
 
-### 5 section IV
+### V section 04
 
-chapter 05  
-section 04  
-models views routes & partials
+**_`models views routes & partials`_**
 
 ```bash Ch-05 section 4
 
@@ -41,47 +39,45 @@ git status
 
 ---
 
-### 5 section V
+### V section 05
 
 chapter 05  
-section 05
-
-<!-- models views routes & partials -->
-
-**_styles.css_**
+section 05  
+**_`styles.css`_**
 
 ---
 
-### 5 section VI
+### V section 06
 
-**_package.json_**
+**_`package.json`_**
+
+---
 
 ## Chapter 06
 
 ---
 
-### 6 section IV
+### VI section 04
 
-chapter 06  
-section 04  
-jQuery Poppers & BootStrap
+**_`jQuery Poppers & BootStrap`_**
 
 ```bash Ch-06 section 4
-# npm i bootstrap jquery @popperjs/core
+
 npm i bootstrap jquery popper.js@1.16.x
 mkdir public/assets
 mv public/images/ public/javascripts/ public/stylesheets/ public/assets/
 npm start
 npm run server1
 npm run server2
+
 ```
 
 ---
 
-### 6 - VI
+### VI section 06
 
-chapter 06  
-section 06  
+**_`feather-icons`_**
+
 npm i feather-icons
 
 ```bash Ch-06 section 6
@@ -92,7 +88,9 @@ npm start
 
 ---
 
-### 6 - VII
+### VI section 07
+
+**_`slate theme`_**
 
 ```bash Ch-06 section 7
 mkdir theme
@@ -102,6 +100,8 @@ cd theme
 npm init
 npm run download
 ```
+
+---
 
 ```bash
 npm i feather-icons
@@ -120,6 +120,8 @@ DEBUG=express:* npm start
  1985  npm run dl-slate
  1994  npm run server1
 ```
+
+---
 
 ## Chapter 07
 
