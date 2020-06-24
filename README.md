@@ -87,8 +87,10 @@ section 06
 **_`Mobile-first with feather-icons`_**
 
 ```bash Ch-06 section 6
+
 npm i feather-icons
 npm start
+
 ```
 
 ---
@@ -109,27 +111,8 @@ npm init -y
 ``` -->
 
 ```bash Ch-06 section 7
-npm run dl-slate
-```
 
----
-
-```bash
-npm i feather-icons
-cd theme
-npm init
-npm run download
-npm run build
-cd theme
 npm run dl-slate
-npm i rotating-file-stream
-npm i fs-extra
-DEBUG=express:* npm start
- 1980  npm run download
- 1983  npm audit
- 1984  npm install
- 1985  npm run dl-slate
- 1994  npm run server1
 ```
 
 ---
@@ -145,11 +128,13 @@ section 03
 **_`debug logging`_**
 
 ```bash section 3
+
 REQUEST_LOG_FORMAT=common npm start
 npm i rotating-file-stream
 npm i fs-extra
 # npm i util
 DEBUG=express:* npm start
+
 ```
 
 ---
@@ -161,6 +146,7 @@ section 04
 **_`mjs modules`_**
 
 ```bash section 4
+
 mv app.js app.mjs
 mv bin/www bin/www.mjs
 # cd models
@@ -169,16 +155,13 @@ mv models/notes-memory.js models/notes-memory.mjs
 # cd routes
 mv routes/index.js routes/index.mjs
 mv routes/notes.js routes/notes.mjs
-# curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-# node -v
 # npm i esm
 # npm -r esm start
 # npm uninstall esm
-# sudo apt purge nodejs
-# sudo apt remove nodejs
-# sudo apt-get install -y nodejs
 
-# MAY NOT NEED..
+```
+
+<!-- # MAY NOT NEED..
 mv app.mjs app.js
 mv bin/www bin/www.js
 # cd models
@@ -186,9 +169,7 @@ mv models/Note.mjs models/Note.js
 mv models/notes-memory.mjs models/notes-memory.js
 # cd routes
 mv routes/index.mjs routes/index.js
-mv routes/notes.mjs routes/notes.js
-# curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-```
+mv routes/notes.mjs routes/notes.js -->
 
 ---
 
