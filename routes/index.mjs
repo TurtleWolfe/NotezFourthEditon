@@ -1,7 +1,6 @@
-var express = require('express');
-var router = express.Router();
-
-const notes = require('../models/notes-memory');
+import express from 'express';
+export const router = express.Router();
+import * as notes from '../models/notes-memory.mjs';
 
 /* GET home page. */
 router.get('/', async (req, res, next) => {
@@ -12,5 +11,3 @@ router.get('/', async (req, res, next) => {
   let notelist = await Promise.all(keyPromises);
   res.render('index', { title: 'Notes', notelist: notelist });
 });
-
-module.exports = router;

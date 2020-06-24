@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEBUG=notez:* node ./bin/www",
-    "server1": "DEBUG=notez:* PORT=3001 node ./bin/www",
-    "server2": "DEBUG=notez:* PORT=3002 node ./bin/www",
+    "start": "DEBUG=notez:* node ./bin/www.mjs",
+    "server1": "DEBUG=notez:* PORT=3001 node ./bin/www.mjs",
+    "server2": "DEBUG=notez:* PORT=3002 node ./bin/www.mjs",
     "dl-slate": "mkdir -p slate && npm run dl-slate-css && npm run dl-slate-min-css",
     "dl-slate-css": "wget https://bootswatch.com/4/slate/bootstrap.css -O slate/bootstrap.css",
     "dl-slate-min-css": "wget https://bootswatch.com/4/slate/bootstrap.min.css -O slate/bootstrap.min.css"
