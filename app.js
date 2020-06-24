@@ -28,6 +28,8 @@ app.use('/assets/vendor/jquery', express.static(
   path.join(__dirname, 'node_modules', 'jquery', 'dist')));
 app.use('/assets/vendor/popper.js', express.static(
   path.join(__dirname, 'node_modules', 'popper.js', 'dist')));
+app.use('/assets/vendor/feather-icons', express.static(
+  path.join(__dirname, 'node_modules', 'feather-icons', 'dist')));
 
 app.use('/', indexRouter);
 app.use('/notes', notesRouter);

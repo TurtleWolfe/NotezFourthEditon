@@ -4,6 +4,8 @@
 
 ### V section 04
 
+chapter 05  
+section 04  
 **_`models views routes & partials`_**
 
 ```bash Ch-05 section 4
@@ -61,7 +63,9 @@ section 06
 
 ### VI section 04
 
-**_`jQuery Poppers & BootStrap`_**
+chapter 06  
+section 04  
+**_`jQuery Poppers BootStrap & assets`_**
 
 ```bash Ch-06 section 4
 
@@ -78,12 +82,11 @@ npm run server2
 
 ### VI section 06
 
-**_`feather-icons`_**
-
-npm i feather-icons
+chapter 06  
+section 06  
+**_`Mobile-first with feather-icons`_**
 
 ```bash Ch-06 section 6
-section 6
 npm i feather-icons
 npm start
 ```
@@ -92,6 +95,8 @@ npm start
 
 ### VI section 07
 
+chapter 06  
+section 07  
 **_`slate theme`_**
 
 ```bash Ch-06 section 7
