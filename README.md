@@ -138,7 +138,11 @@ DEBUG=express:* npm start
 
 ---
 
-### 7 - III
+### VII section 03
+
+chapter 07  
+section 03  
+**_`debug logging`_**
 
 ```bash section 3
 REQUEST_LOG_FORMAT=common npm start
@@ -148,7 +152,13 @@ npm i fs-extra
 DEBUG=express:* npm start
 ```
 
-### 7 - IV
+---
+
+### VII section 04
+
+chapter 07  
+section 04  
+**_`mjs modules`_**
 
 ```bash section 4
 mv app.js app.mjs
@@ -180,37 +190,55 @@ mv routes/notes.mjs routes/notes.js
 # curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 ```
 
-### 7 - V
+---
+
+### VII section 05
+
+chapter 07  
+section 05  
+**_`storage file_system`_**
 
 ```bash section 5
 section 5
 ```
 
-### 7 - VI
+---
+
+### VII - VI
 
 ```bash section 6
 section 6
 ```
 
-### 7 - VII
+---
+
+### VII - VII
 
 ```bash section 7
 section 7
 ```
 
-### 7 - VIII
+---
+
+### VII - VIII
 
 ```bash section 8
 section 8
 ```
 
-### 7 - IX
+---
+
+### VII - IX
 
 ```bash section 9
 section 9
 ```
 
+---
+
 ## Chapter 08
+
+---
 
 ### 8 - III
 
