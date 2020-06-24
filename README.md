@@ -99,13 +99,17 @@ chapter 06
 section 07  
 **_`slate theme`_**
 
+<!--
 ```bash Ch-06 section 7
 mkdir theme
 touch theme/package.json
-ls -al theme
+touch theme/_custom.scss
 cd theme
-npm init
-npm run download
+npm init -y
+``` -->
+
+```bash Ch-06 section 7
+npm run dl-slate
 ```
 
 ---

@@ -1,0 +1,17 @@
+{
+  "name": "theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "download": "wget -O - https://github.com/twbs/bootstrap/archive/v4.5.0.tar.gz | tar xvfz -",
+    "postdownload": "cd bootstrap-4.5.0 && npm install",
+    "prebuild": "cp _custom.scss bootstrap.scss bootstrap-4.5.0/scss",
+    "build": "cd bootstrap-4.5.0 && npm run dist",
+    "watch": "cd bootstrap-4.5.0 && npm run watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

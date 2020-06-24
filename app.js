@@ -22,8 +22,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/assets/vendor/bootstrap', express.static(
-  path.join(__dirname, 'node_modules', 'bootstrap', 'dist')));
+// app.use('/assets/vendor/bootstrap', express.static(
+// path.join(__dirname, 'theme', 'bootstrap-4.5.0', 'dist')));
+// path.join(__dirname, 'node_modules', 'bootstrap', 'dist')));
+app.use('/assets/vendor/bootstrap/js', express.static(
+  path.join(__dirname, 'node_modules', 'bootstrap', 'dist', 'js')));
+app.use('/assets/vendor/bootstrap/css', express.static(
+  path.join(__dirname, 'slate')));
 app.use('/assets/vendor/jquery', express.static(
   path.join(__dirname, 'node_modules', 'jquery', 'dist')));
 app.use('/assets/vendor/popper.js', express.static(
