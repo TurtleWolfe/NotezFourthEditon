@@ -193,8 +193,14 @@ npm run server2
 
 ### VII - VI
 
+chapter 07  
+section 06  
+**_`storage LevelUP`_**
+
 ```bash section 6
-section 6
+ npm i level
+ touch models/notes-level.mjs
+ npm run start-level
 ```
 
 ---
