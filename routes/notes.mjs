@@ -1,9 +1,10 @@
 // const util = require('util');
 import express from 'express';
-export const router = express.Router();
-import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 
-// Add Note. 
+export const router = express.Router();
+
+// Add Note (create)
 router.get('/add', (req, res, next) => {
     res.render('noteedit', {
         title: "Add a Note",

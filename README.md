@@ -75,7 +75,6 @@ mv public/images/ public/javascripts/ public/stylesheets/ public/assets/
 npm start
 npm run server1
 npm run server2
-
 ```
 
 ---
@@ -179,8 +178,15 @@ chapter 07
 section 05  
 **_`storage file_system`_**
 
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
+```
+
 ```bash section 5
-section 5
+npm run start-fs
+npm run server1
+npm run server2
 ```
 
 ---
