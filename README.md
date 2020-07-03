@@ -191,7 +191,7 @@ npm run server2
 
 ---
 
-### VII - VI
+### VII section 06
 
 chapter 07  
 section 06  
@@ -205,10 +205,27 @@ section 06
 
 ---
 
-### VII - VII
+### VII section 07
+
+chapter 07  
+section 07  
+**_`SQL with SQLite3`_**
 
 ```bash section 7
-section 7
+npm i sqlite3
+touch models/schema-sqlite3.sql
+npm run sqlite3-setup
+touch models/notes-sqlite3.mjs
+npm run start-sqlite3
+DEBUG=notez:* npm run start-sqlite3
+npm run start-sqlite3
+sqlite3 chap07.sqlite3
+```
+
+**_`SQL with SQLite3`_**
+
+```sql
+select * from notes;
 ```
 
 ---
