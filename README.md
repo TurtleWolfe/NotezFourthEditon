@@ -230,7 +230,11 @@ select * from notes;
 
 ---
 
-### VII - VIII
+### VII section 08
+
+chapter 07  
+section 08  
+**_`ORM way with Sequelize`_**
 
 ```bash section 8
 section 8
@@ -238,7 +242,11 @@ section 8
 
 ---
 
-### VII - IX
+### VII - section 09
+
+chapter 07  
+section 09  
+**_`MongoDB`_**
 
 ```bash section 9
 section 9
