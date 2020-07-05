@@ -1,9 +1,10 @@
-const util = require('util');
-const express = require('express');
-const router = express.Router();
-const notes = require('../models/notes-memory');
+// const util = require('util');
+import express from 'express';
+import * as notes from '../models/notes.mjs';
 
-// Add Note. 
+export const router = express.Router();
+
+// Add Note (create)
 router.get('/add', (req, res, next) => {
     res.render('noteedit', {
         title: "Add a Note",
@@ -58,5 +59,3 @@ router.post('/destroy/confirm', async (req, res, next) => {
     await notes.destroy(req.body.notekey);
     res.redirect('/');
 });
-
-module.exports = router; 

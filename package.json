@@ -3,9 +3,18 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEBUG=notez:* node ./bin/www",
-    "server1": "DEBUG=notez:* PORT=3001 node ./bin/www",
-    "server2": "DEBUG=notez:* PORT=3002 node ./bin/www",
+    "start": "DEBUG=notez:* node --experimental-modules ./bin/www.mjs",
+    "start-fs": "DEBUG=notez:* NOTES_MODEL=fs node --experimental-modules ./bin/www.mjs",
+    "server1": "DEBUG=notez:* NOTES_MODEL=fs PORT=3001 node --experimental-modules ./bin/www.mjs",
+    "server2": "DEBUG=notez:* NOTES_MODEL=fs PORT=3002 node --experimental-modules ./bin/www.mjs",
+    "start-level": "DEBUG=notez:* NOTES_MODEL=level node --experimental-modules ./bin/www.mjs",
+    "sqlite3-setup": "sqlite3 chap07.sqlite3 --init models/schema-sqlite3.sql",
+    "start-sqlite3": "DEBUG=notez:* SQLITE_FILE=chap07.sqlite3 NOTES_MODEL=sqlite3 node --experimental-modules ./bin/www.mjs",
+    "server1-sqlite3": "DEBUG=notez:* SQLITE_FILE=chap07.sqlite3 NOTES_MODEL=sqlite3 PORT=3001 node --experimental-modules ./bin/www.mjs",
+    "server2-sqlite3": "DEBUG=notez:* SQLITE_FILE=chap07.sqlite3 NOTES_MODEL=sqlite3 PORT=3002 node --experimental-modules ./bin/www.mjs",
+    "start-sequelize": "DEBUG=notez:* SEQUELIZE_CONNECT=models/sequelize-sqlite.yaml NOTES_MODEL=sequelize node  --experimental-modules ./bin/www.mjs",
+    "server1-sequelize": "DEBUG=notez:* SEQUELIZE_CONNECT=models/sequelize-sqlite.yaml NOTES_MODEL=sequelize PORT=3001 node --experimental-modules ./bin/www.mjs",
+    "server2-sequelize": "DEBUG=notez:* SEQUELIZE_CONNECT=models/sequelize-sqlite.yaml NOTES_MODEL=sequelize PORT=3002 node --experimental-modules ./bin/www.mjs",
     "dl-slate": "mkdir -p slate && npm run dl-slate-css && npm run dl-slate-min-css",
     "dl-slate-css": "wget https://bootswatch.com/4/slate/bootstrap.css -O slate/bootstrap.css",
     "dl-slate-min-css": "wget https://bootswatch.com/4/slate/bootstrap.min.css -O slate/bootstrap.min.css"
@@ -20,8 +29,12 @@
     "hbs": "^4.1.1",
     "http-errors": "~1.6.3",
     "jquery": "^3.5.1",
+    "js-yaml": "^3.14.0",
+    "level": "^6.0.1",
     "morgan": "~1.9.1",
     "popper.js": "^1.16.1",
-    "rotating-file-stream": "^2.1.1"
+    "rotating-file-stream": "^2.1.1",
+    "sequelize": "^6.2.4",
+    "sqlite3": "^5.0.0"
   }
 }

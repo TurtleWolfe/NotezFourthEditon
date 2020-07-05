@@ -1,25 +1,29 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-
-var indexRouter = require('./routes/index');
+const app = express();
+// Workaround for lack of __dirname in ES6 modules
+const __dirname = dirname(new URL(import.meta.url).pathname);
+// const error = require('debug')('notez:error');
+import DBG from 'debug';
+const debug = DBG('notez:debug');
+const error = DBG('notez:error');
+const { ensureDir } = fse;
+import cookieParser from 'cookie-parser';
+import createError from 'http-errors';
+import express from 'express';
+// import { ensureDir } from 'fs-extra';
+import fse from 'fs-extra';
+import logger from 'morgan';
+import rfs from 'rotating-file-stream';
+import { dirname, join } from 'path';
+import util from 'util';
+import { router as indexRouter } from './routes/index.mjs';
+import { router as notesRouter } from './routes/notes.mjs';
 // var usersRouter = require('./routes/users');
-const notesRouter = require('./routes/notes');
-const error = require('debug')('notez:error');
-// import DBG from 'debug';
-// const debug = DBG('notes:debug'); 
-// const error = DBG('notes:error');
-var app = express();
-const fs = require('fs-extra');
-const rfs = require('rotating-file-stream');
 var logStream;
 // Log to a file if requested
 if (process.env.REQUEST_LOG_FILE) {
   (async () => {
-    let logDirectory = path.dirname(process.env.REQUEST_LOG_FILE);
-    await fs.ensureDir(logDirectory);
+    let logDirectory = dirname(process.env.REQUEST_LOG_FILE);
+    await ensureDir(logDirectory);
     logStream = rfs(process.env.REQUEST_LOG_FILE, {
       size: '10M',     // rotate every 10 MegaBytes written
       interval: '1d',  // rotate daily
@@ -28,10 +32,10 @@ if (process.env.REQUEST_LOG_FILE) {
   })().catch(err => { console.error(err); });
 }
 // view engine setup
-const hbs = require('hbs');
-app.set('views', path.join(__dirname, 'views'));
+import hnd_bars from 'hbs';
+app.set('views', join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-hbs.registerPartials(path.join(__dirname, 'partials'));
+hnd_bars.registerPartials(join(__dirname, 'partials'));
 
 app.use(logger(process.env.REQUEST_LOG_FORMAT || 'dev', {
   stream: logStream ? logStream : process.stdout
@@ -39,21 +43,21 @@ app.use(logger(process.env.REQUEST_LOG_FORMAT || 'dev', {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(join(__dirname, 'public')));
+app.use(express.static(join(__dirname, 'public')));
 // app.use('/assets/vendor/bootstrap', express.static(
 // path.join(__dirname, 'theme', 'bootstrap-4.5.0', 'dist')));
 // path.join(__dirname, 'node_modules', 'bootstrap', 'dist')));
 app.use('/assets/vendor/bootstrap/js', express.static(
-  path.join(__dirname, 'node_modules', 'bootstrap', 'dist', 'js')));
+  join(__dirname, 'node_modules', 'bootstrap', 'dist', 'js')));
 app.use('/assets/vendor/bootstrap/css', express.static(
-  path.join(__dirname, 'slate')));
+  join(__dirname, 'slate')));
 app.use('/assets/vendor/jquery', express.static(
-  path.join(__dirname, 'node_modules', 'jquery', 'dist')));
+  join(__dirname, 'node_modules', 'jquery', 'dist')));
 app.use('/assets/vendor/popper.js', express.static(
-  path.join(__dirname, 'node_modules', 'popper.js', 'dist')));
+  join(__dirname, 'node_modules', 'popper.js', 'dist')));
 app.use('/assets/vendor/feather-icons', express.static(
-  path.join(__dirname, 'node_modules', 'feather-icons', 'dist')));
+  join(__dirname, 'node_modules', 'feather-icons', 'dist')));
 
 app.use('/', indexRouter);
 app.use('/notes', notesRouter);
@@ -95,4 +99,4 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+export default app;

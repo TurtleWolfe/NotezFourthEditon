@@ -1,23 +1,38 @@
-const Note = require('./Note');
+import Note from './Note.mjs';
 
 var notes = [];
 
-exports.update = exports.create = async function (key, title, body) {
+async function crupdate(key, title, body) {
     notes[key] = new Note(key, title, body);
     return notes[key];
-};
+}
 
-exports.read = async function (key) {
+export function create(key, title, body) {
+    return crupdate(key, title, body);
+}
+
+export function update(key, title, body) {
+    return crupdate(key, title, body);
+}
+
+export async function read(key) {
     if (notes[key]) return notes[key];
     else throw new Error(`Note ${key} does not exist`);
-};
+}
 
-exports.destroy = async function (key) {
+export async function destroy(key) {
     if (notes[key]) {
         delete notes[key];
     } else throw new Error(`Note ${key} does not exist`);
-};
+}
 
-exports.keylist = async function () { return Object.keys(notes); };
-exports.count = async function () { return notes.length; };
-exports.close = async function () { };
+export async function keylist() {
+    return Object.keys(notes);
+}
+
+export async function count() {
+    return notes.length;
+}
+
+export async function close() {
+}

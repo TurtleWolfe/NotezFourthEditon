@@ -4,9 +4,12 @@
  * Module dependencies.
  */
 
-var app = require('../app');
-var debug = require('debug')('notez:server');
-var http = require('http');
+import app from '../app.mjs';
+import DBG from 'debug';
+const debug = DBG('notez:server-debug');
+const error = DBG('notez:server-error');
+// var debug = require('debug')('notez:server');
+import { createServer } from 'http';
 
 /**
  * Get port from environment and store in Express.
@@ -19,7 +22,7 @@ app.set('port', port);
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+var server = createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
