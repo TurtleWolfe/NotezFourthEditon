@@ -15,6 +15,9 @@
     "start-sequelize": "DEBUG=notez:* SEQUELIZE_CONNECT=models/sequelize-sqlite.yaml NOTES_MODEL=sequelize node  --experimental-modules ./bin/www.mjs",
     "server1-sequelize": "DEBUG=notez:* SEQUELIZE_CONNECT=models/sequelize-sqlite.yaml NOTES_MODEL=sequelize PORT=3001 node --experimental-modules ./bin/www.mjs",
     "server2-sequelize": "DEBUG=notez:* SEQUELIZE_CONNECT=models/sequelize-sqlite.yaml NOTES_MODEL=sequelize PORT=3002 node --experimental-modules ./bin/www.mjs",
+    "start-mongodb": "DEBUG=notez:* MONGO_URL=mongodb://localhost/ MONGO_DBNAME=chap07 NOTES_MODEL=mongodb node --experimental-modules ./bin/www.mjs",
+    "server1-mongodb": "DEBUG=notez:* MONGO_URL=mongodb://localhost/ MONGO_DBNAME=chap07 NOTES_MODEL=mongodb PORT=3001 node --experimental-modules ./bin/www.mjs",
+    "server2-mongodb": "DEBUG=notez:* MONGO_URL=mongodb://localhost/ MONGO_DBNAME=chap07 NOTES_MODEL=mongodb PORT=3002 node --experimental-modules ./bin/www.mjs",
     "dl-slate": "mkdir -p slate && npm run dl-slate-css && npm run dl-slate-min-css",
     "dl-slate-css": "wget https://bootswatch.com/4/slate/bootstrap.css -O slate/bootstrap.css",
     "dl-slate-min-css": "wget https://bootswatch.com/4/slate/bootstrap.min.css -O slate/bootstrap.min.css"
@@ -31,6 +34,7 @@
     "jquery": "^3.5.1",
     "js-yaml": "^3.14.0",
     "level": "^6.0.1",
+    "mongodb": "^3.5.9",
     "morgan": "~1.9.1",
     "popper.js": "^1.16.1",
     "rotating-file-stream": "^2.1.1",

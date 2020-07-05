@@ -252,79 +252,79 @@ section 09
 **_`MongoDB`_**
 
 ````bash section 9
- 1916  wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
- 1917  echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
- 1919  sudo apt-get install -y mongodb-org
- 1920  which mongo
- 1921  mongo
- 1922  echo "mongodb-org hold" | sudo dpkg --set-selections
- 1923  echo "mongodb-org-server hold" | sudo dpkg --set-selections
- 1924  echo "mongodb-org-shell hold" | sudo dpkg --set-selections
- 1925  echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
- 1926  echo "mongodb-org-tools hold" | sudo dpkg --set-selections
- 1927  sudo systemctl start mongod
- 1928  sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
- 1929  echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
- 1930  sudo apt-get update
- 1931  sudo apt-get install -y mongodb-org
- 1932  sudo apt-get purge mongodb-org*
- 1933  Remove MongoDB
- 1934  mongo db
- 1935  sudo apt install mongodb-clients
- 1936  mongo db
- 1937  sudo apt-get purge mongodb mongodb-clients mongodb-server mongodb-dev
- 1938  sudo apt-get purge mongodb-10gen
- 1939  sudo apt-get autoremove
- 1940  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
- 1941  nano /etc/apt/sources.lists
- 1942  sudo nano /etc/apt/sources.lists
- 1943  nano /etc/apt/sources.lists
- 1945  sudo apt-get install mongodb-10gen
- 1946  sudo rm /var/lib/mongodb/mongod.lock
- 1947  mongod --repair
- 1948  sudo apt install mongodb-server-core
- 1949  sudo service mongodb start
- 1950  mongo
- 1951  mongodb
- 1952  mongod
- 1953  sudo service mongodb start
- 1954  mongo
- 1955  mongod
- 1956  mongod --repair
- 1957  which mongod
- 1960  sudo apt remove mongod
- 1961  mongodb
- 1962  sudo rm /var/lib/mongodb/mongod.lock
- 1963  sudo apt-get purge mongodb-org*
- 1964  sudo rm -r /var/log/mongodb /var/lib/mongodb
- 1965  sudo apt-get purge mongod*
- 1966  mongodb
- 1967  which mongod
- 1968  nano /etc/apt/sources.lists
- 1969  sudo nano /etc/apt/sources.lists
- 1970  nano /etc/apt/sources.lists
- 1975  which mongo
- 1976  mongo
- 1977  sudo apt install mongodb-clients
- 1978  mongo
- 1979  mongodb
- 1980  sudo apt uninstall mongodb-clients
- 1981  sudo apt remove mongodb-clients
- 1982  sudo apt purge mongodb-clients
- 1984  mongo
- 1985  which mongo
- 1986  mongodb
- 1987  mongod
- 1988  sudo apt install mongodb-server-core
- 1989  mongod
- 1990  sudo apt install mongodb-clients
- 1991  mongod
- 1992  which mongo
- 1993  mongodb
- 1994  mongod
- 1999  npm i mongodb
- 2000  npm audit
- 2002  touch models/notes-mongodb.mjs
+wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
+sudo apt-get install -y mongodb-org
+which mongo
+mongo
+echo "mongodb-org hold" | sudo dpkg --set-selections
+echo "mongodb-org-server hold" | sudo dpkg --set-selections
+echo "mongodb-org-shell hold" | sudo dpkg --set-selections
+echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
+echo "mongodb-org-tools hold" | sudo dpkg --set-selections
+sudo systemctl start mongod
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+sudo apt-get purge mongodb-org*
+Remove MongoDB
+mongo db
+sudo apt install mongodb-clients
+mongo db
+sudo apt-get purge mongodb mongodb-clients mongodb-server mongodb-dev
+sudo apt-get purge mongodb-10gen
+sudo apt-get autoremove
+do apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+nano /etc/apt/sources.lists
+sudo nano /etc/apt/sources.lists
+nano /etc/apt/sources.lists
+sudo apt-get install mongodb-10gen
+sudo rm /var/lib/mongodb/mongod.lock
+mongod --repair
+sudo apt install mongodb-server-core
+sudo service mongodb start
+mongo
+mongodb
+mongod
+sudo service mongodb start
+mongo
+mongod
+mongod --repair
+which mongod
+sudo apt remove mongod
+mongodb
+sudo rm /var/lib/mongodb/mongod.lock
+sudo apt-get purge mongodb-org*
+sudo rm -r /var/log/mongodb /var/lib/mongodb
+sudo apt-get purge mongod*
+mongodb
+which mongod
+nano /etc/apt/sources.lists
+sudo nano /etc/apt/sources.lists
+nano /etc/apt/sources.lists
+which mongo
+mongo
+sudo apt install mongodb-clients
+mongo
+mongodb
+sudo apt uninstall mongodb-clients
+sudo apt remove mongodb-clients
+sudo apt purge mongodb-clients
+mongo
+which mongo
+mongodb
+mongod
+sudo apt install mongodb-server-core
+mongod
+sudo apt install mongodb-clients
+mongod
+which mongo
+mongodb
+mongod
+npm i mongodb
+npm audit
+touch models/notes-mongodb.mjs
 ---
 
 ## Chapter 08
